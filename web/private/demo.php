@@ -8,6 +8,9 @@ define('PUBLIC_BASE',$_SERVER['DOCUMENT_ROOT'] . '/');
 /* Load functions */
 include(PRIVATE_BASE . 'classes/mysql.php');
 
+/* Manually load vendor/magicphp */
+include(PRIVATE_BASE . 'vendor/magicphp/magic.php');
+
 /* Begin logging */
 
 /* Load template contents */
