@@ -1,0 +1,515 @@
+/** 
+
+-----     TABLE OF CONTENT -----
+
+**/
+
+/*     
+
+		1.0			GENERAL STYLES
+		
+		
+		----------------------------------
+		
+		
+		2.0			STRUCTURAL STYLES
+		
+		
+			2.1 		OVERLAY STYLES
+			
+			2.2			NAVIGATION STRUCTURE STYLES
+			
+			2.3			COUNTER STRUCTURE STYLES
+			
+			2.4			ICON NAVIGATION MENU STYLES
+			
+			2.5 		MENU ICON STYLES
+			
+				2.5.1		MENU ONHOVER LABEL
+				
+			2.6 		HEADER STRUCTURE STYLE
+			
+			2.7			HEADER BUTTON BAR STYLES
+			
+			2.8			SIGNUP FORM STYLES
+			
+			2.9 		SOCIAL BAR STYLES	
+			
+		----------------------------------
+		
+		
+		3.0 		ERROR & SUCCESS PAGE STYLES
+		
+		
+			3.1 		TITLE STYLES
+			
+			3.2 		BUTTON STLYES
+			
+			3.3 		SHARE STYLES
+			
+			
+		----------------------------------
+		
+*/
+
+
+/** 
+
+----    1.0    ----    General Styles    ----
+
+ **/
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	/** Make the Background Fit the Screen **/
+	background: url('../images/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+input:focus {
+	outline: none;
+}
+.disable {
+	display:none;
+}
+.icon {
+	margin: 0 0 0 5px;
+}
+
+/** 
+
+----    2.0    ----    Structural Styles    ----
+
+ **/
+
+
+ 
+ 
+/**   2.1 - Overlay Styles  **/
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+#overlay2 {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none;
+	background: rgba(0,0,0,0.5);
+	z-index: 0;
+}
+
+
+
+/**    2.2 - Navigation Structure Styles     **/
+
+
+nav#top-menu {
+	width: 100%;
+}
+#nav-wrap {
+	padding: 10px 20px;
+}
+
+/** Logo **/
+#logo {
+	float: left;
+	margin: 20px;
+}
+#logo h2 {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+
+
+/**      2.3 - Counter Structure Styles     **/
+
+#counter {
+	float: right;
+	margin: 20px;
+}
+#clock {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-right: 5px;
+}
+
+
+
+/**      2.4 - Icon Navigation Menu Styles     **/
+
+#click-menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+#click-menu.disable {
+	display:none;
+}
+#click-menu ul {
+	margin: 0;
+	padding: 0;
+	display: none;
+	list-style: none;
+}
+#click-menu ul li{
+	display: inline-block;
+	margin: 20px 20px;
+	cursor: pointer;
+}
+#click-menu ul li:hover{
+	margin: 5px 20px;
+}
+
+
+/**     2.5 - Menu Icon Styles     **/
+.menu {
+  cursor: pointer;
+  margin: 35px auto 0 auto;
+  padding-left: 1.25em;
+  position: relative;
+  width: 5px;
+  height: 20px;
+}
+.menu-global {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border-top: 2px solid white;
+  width: 100%;
+  transition: 0.55s;
+}
+.menu-top {
+  top: 5px;
+}
+.menu-middle {
+  top: 10px;
+}
+.menu-bottom {
+  top: 15px;
+}
+.menu:hover .menu-top {
+  backface-visibility: hidden;
+  top: 5px;
+  transition:  0.2s;
+}
+.menu:hover .menu-middle {
+  top: 12px;
+  transition:  0.2s;
+}
+.menu:hover .menu-bottom {
+  backface-visibility: hidden;
+  top: 19px;
+  transition:  0.2s;
+}
+.menu.active .menu-top {
+  backface-visibility: hidden;
+  top: 5px;
+  transition:  0.2s;
+}
+.menu.active .menu-middle {
+  top: 12px;
+  transition:  0.2s;
+}
+.menu.active .menu-bottom {
+  backface-visibility: hidden;
+  top: 19px;
+  transition:  0.2s;
+}
+
+
+
+/**      2.5.1 - Menu Onhover Label     **/
+
+[data-tooltip] {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+[data-tooltip]:after {
+    	content: attr(data-tooltip);
+   		display: inline-block;
+    	position: absolute;
+    	padding: 8px 14px;
+    	top: 120%;
+    	margin-bottom: 0;
+    	left: 50%;
+    	-webkit-transform: translateX(-50%);
+    	-moz-transform: translateX(-50%);
+    	-o-transform: translateX(-50%);
+    	-ms-transform: translateX(-50%);
+    	transform: translateX(-50%);
+    	-webkit-transition: all 0.2s;
+    	-moz-transition: all 0.2s;
+    	-o-transition: all 0.2s;
+    	-ms-transition: all 0.2s;
+    	transition: all 0.2s;
+    	background: #212121;
+    	color: #fff;
+    	opacity: 0;
+    	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    	filter: alpha(opacity=0);
+
+    	border-radius: 4px;
+    	text-align: center;
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-transform: uppercase;    	
+		white-space: nowrap;
+    	pointer-events: none
+}
+
+[data-tooltip]:hover:after {
+    	opacity: 1;
+    	-ms-filter: none;
+    	filter: none;
+    	margin-top: 10px
+}
+
+
+
+/**     2.6 - Header Structure Styles     **/
+
+
+section#info {
+	margin: 200px 0 0;
+	text-align: center;
+}
+#info h1 {
+	font-size: 80px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: 20px 0 0 0;
+}
+#info h3 {
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+/**     2.7 - Header Button Bar Styles     **/
+
+#button-bar {
+	margin: 40px 0;
+}
+#button-bar a.call-to-action {
+	margin: 5px 15px;
+}
+a.call-to-action {
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	background: #212121;
+	border-bottom: 4px solid #000;
+	cursor: pointer;
+}
+a.call-to-action:hover {
+	color: #e1e1e1;
+}
+
+
+/**      2.8 - Signup Form Styles     **/
+
+#signup {
+	display:none;
+	position: fixed;
+	z-index:1;
+	width: 500px;
+	max-width: 90%;
+	height: 185px;
+	max-height: 100%;
+	color: #000;
+	background: #fff;
+	/** Center Form Hack **/
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#signup-inner {
+	padding: 20px;
+}
+#signup input {
+	padding: 5px 15px;
+	font-size: 14px;
+	background: rgb(239, 239, 239);
+	border: 1px solid #e1e1e1;
+	display: inline-block;
+}
+#signup input:focus {
+	border:1px solid #d1d1d1;
+}
+#signup input.text {
+	height: 50px;
+}
+#signup input.name {
+	width: 41%;
+	margin: 10px 6px 0 0;
+}
+#signup input.email {
+	width: 92%;
+	margin: 10px 10px 0 0;
+}
+#signup input.submit {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: #212121;
+	border: 0;
+	border-bottom: 3px solid #000;
+	padding: 30px 0;
+	width: 100%;
+	margin:0;
+}
+#signup input.submit:hover {
+	background: #000;
+}
+#close-signup {
+	font-size: 16px;
+	position: absolute;
+	margin: 20px -40px 0 0;
+	right: 0;
+	top: 0;
+	color: #fff;
+}
+#close-signup:hover {	
+	color: #d1d1d1;
+}
+
+
+
+/**     2.9 - Social Bar Styles     **/
+
+#social-bar {
+	display: none;
+	position: fixed;
+	z-index: 0;
+	bottom: 0;
+	width: 100%;
+	color: #000;
+	background: #fff;
+	border-top: 1px solid #e1e1e1;
+	text-align:center;
+}
+#social-inner {
+	padding: 10px 0;
+}
+ul#social-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+ul#social-list li{
+	display: inline-block;
+	padding: 0 15px;
+	margin: 0;
+}
+ul#social-list li:hover{
+	color: #9e9e9e;
+}
+
+/** 
+
+----    3.0    ----    Error & Success Page Styles    ----
+
+ **/
+
+#message-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.7);
+	z-index: -1;
+}
+#thank-you {
+	position: absolute;
+	z-index:1;
+	width: 500px;
+	max-width: 90%;
+	height: 180px;
+	max-height: 100%;
+	color: #000;
+	background: #fff;
+	/** Center Form Hack **/
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#thank-you #inner {
+	padding: 20px 10px 10px 10px;
+}
+#thank-you #button-bar {
+	width: 100%;
+	bottom: 0;
+	background: #212121;
+}
+#button-bar #button {
+	text-align: center;
+	background: #212121;
+	padding: 30px 0;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 800;
+	font-size: 12px;
+}
+#button-bar #button.full {
+	width: 100%;
+}
+#button-bar #button.half {
+	width: 50%;
+}
+#button-bar #button:hover{
+	background: #000;
+}
+#button.left {
+	float: left;
+}
+#button.right {
+	float: right;
+}
+
+
+/**     3.1 - Title Styles     **/
+
+#thank-you h1, #thank-you h2, #thank-you h3, #thank-you h4{
+	margin: 0;
+	text-transform: uppercase;
+}
+#thank-you h1 {
+	font-size: 60px;
+}
+#thank-you h4 {
+	font-weight: 300;
+}
