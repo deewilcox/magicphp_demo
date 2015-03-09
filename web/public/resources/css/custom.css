@@ -1,0 +1,144 @@
+/* Custom styles for Magic PHP Demo */
+
+#beerSignup {
+	display:none;
+	position: fixed;
+	z-index:1;
+	width: 500px;
+	max-width: 90%;
+	height: 185px;
+	max-height: 100%;
+	color: #000;
+	background: #fff;
+	/** Center Form Hack **/
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#beerSignup-inner {
+	padding: 20px;
+}
+#beerSignup input {
+	padding: 5px 15px;
+	font-size: 14px;
+	background: rgb(239, 239, 239);
+	border: 1px solid #e1e1e1;
+	display: inline-block;
+}
+#beerSignup input:focus {
+	border:1px solid #d1d1d1;
+}
+#beerSignup input.text {
+	height: 50px;
+}
+#beerSignup input.name {
+	width: 41%;
+	margin: 10px 6px 0 0;
+}
+#beerSignup input.email {
+	width: 92%;
+	margin: 10px 10px 0 0;
+}
+#beerSignup input.submit {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: #212121;
+	border: 0;
+	border-bottom: 3px solid #000;
+	padding: 30px 0;
+	width: 100%;
+	margin:0;
+}
+#beerSignup input.submit:hover {
+	background: #000;
+}
+
+
+#beerClose {
+	font-size: 16px;
+	position: absolute;
+	margin: 20px -40px 0 0;
+	right: 0;
+	top: 0;
+	color: #fff;
+}
+#beerClose:hover {	
+	color: #d1d1d1;
+}
+
+#coffeeSignup {
+	display:none;
+	position: fixed;
+	z-index:1;
+	width: 500px;
+	max-width: 90%;
+	height: 185px;
+	max-height: 100%;
+	color: #000;
+	background: #fff;
+	/** Center Form Hack **/
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#coffeeSignup-inner {
+	padding: 20px;
+}
+#coffeeSignup input {
+	padding: 5px 15px;
+	font-size: 14px;
+	background: rgb(239, 239, 239);
+	border: 1px solid #e1e1e1;
+	display: inline-block;
+}
+#coffeeSignup input:focus {
+	border:1px solid #d1d1d1;
+}
+#coffeeSignup input.text {
+	height: 50px;
+}
+#coffeeSignup input.name {
+	width: 41%;
+	margin: 10px 6px 0 0;
+}
+#coffeeSignup input.email {
+	width: 92%;
+	margin: 10px 10px 0 0;
+}
+#coffeeSignup input.submit {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: #212121;
+	border: 0;
+	border-bottom: 3px solid #000;
+	padding: 30px 0;
+	width: 100%;
+	margin:0;
+}
+#coffeeSignup input.submit:hover {
+	background: #000;
+}
+
+#coffeeClose {
+	font-size: 16px;
+	position: absolute;
+	margin: 20px -40px 0 0;
+	right: 0;
+	top: 0;
+	color: #fff;
+}
+#coffeeClose:hover {	
+	color: #d1d1d1;
+}

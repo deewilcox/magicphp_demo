@@ -27,7 +27,7 @@ namespace Magic;
 
 **/
 
-include_once('config/magicSettings.json');
+//include_once('config/magicSettings.json');
 include_once('magicResponse.php');
 include_once('magicFunctions.php');
 include_once('magicRequestManager.php');
