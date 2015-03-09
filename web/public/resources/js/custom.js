@@ -5,7 +5,7 @@
 
 $(document).ready(function() { 
 	// Change Launch Date Here in the following format YYYY/MM/DD
-		$('#clock').countdown('2020/10/10', function(event) {
+		$('#clock').countdown('2015/03/10', function(event) {
 			// Below you can change the text that is shown to the user
 			// Tags such as %Y for years, %D (days), %H (hours), %M (minutes) and %S (seconds) can be used
 		$(this).html(event.strftime('%D days Left'));

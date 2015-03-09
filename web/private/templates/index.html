@@ -8,13 +8,13 @@
 		<title>Magic PHP | Demo</title>
 		
 		<!-- Call Stylesheets -->
-		<link href="/web/public/resources/css/dark.css" rel="stylesheet" type="text/css" />
-		<link href="/web/public/resources/css/fonts.css" rel="stylesheet" type="text/css" />
-		<link href="/web/public/resources/css/custom.css" rel="stylesheet" type="text/css" />
+		<link href="/resources/css/dark.css" rel="stylesheet" type="text/css" />
+		<link href="/resources/css/fonts.css" rel="stylesheet" type="text/css" />
+		<link href="/resources/css/custom.css" rel="stylesheet" type="text/css" />
 		
 		<!-- Call Jquery & Countdown Script -->
-		<script src="/web/public/resources/js/jquery-latest.js" type="text/javascript"></script>
-		<script src="/web/public/resources/js/jquery.countdown.js" type="text/javascript"></script>
+		<script src="/resources/js/jquery-latest.js" type="text/javascript"></script>
+		<script src="/resources/js/jquery.countdown.js" type="text/javascript"></script>
 		
 	</head>
 	<body>
@@ -26,14 +26,13 @@
 		<!-- Signup Div -->
 		<div id="signup">
 			<span class="icon-close signup-toggle" id="close-signup"></span>
-			<form name="notification" action="/web/private/functions/contact.php" method="POST">
+			<form id="beer" name="beer" action="/web/private/functions/contact.php" method="POST">
 				<div id="signup-inner">
 					<input class="name text" name="first-name" type="text" placeholder="First Name"/>
 					<input class="name text" name="last-name" type="text" placeholder="Last Name"/>
 					<input class="email text" name="email" type="text" placeholder="Email Address"/>
 				</div>
-				<input class="submit" type="submit" value="submit"/>
-
+				<input type="submit" class="submit" value="Beer me!"/>
 			</form>
 		</div>
 		<!-- Main Content -->
@@ -66,12 +65,12 @@
 				</nav>
 				<section id="info">
 					<!-- Title -->
-					<h1>We are Nearly Here!</h1>
-					<h3>We are excited about our launch, you should be aswell!</h3>
+					<h1>Beer vs Coffee</h1>
+					<h3>Which one is better for your brain?</h3>
 					<!-- Buttons Go here -->
 					<div id="button-bar">
-						<a class="call-to-action signup-toggle">Request Early Access <span class="icon icon-envelope"></span></a>
-						<a class="call-to-action social-toggle">Connect <span class="icon icon-users"></span></a>
+						<a class="call-to-action signup-toggle">Beer <span class="icon icon-envelope"></span></a>
+						<a class="call-to-action social-toggle">Coffee <span class="icon icon-users"></span></a>
 					</div>
 				</section>
 			</header>
@@ -89,7 +88,7 @@
 			</footer>
 		</main>
 		
-		<script src="/web/public/resources/js/custom.js" type="text/javascript"></script>
+		<script src="/resources/js/custom.js" type="text/javascript"></script>
 		
 	</body>
 </html>
