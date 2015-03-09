@@ -23,7 +23,9 @@ $(document).ready(function() {
 	
 	var inputs = document.getElementsByTagName("input");
 	for (var i = 0; i < inputs.length; i++) {
-		inputs[i].value = inputs[i].getAttribute('data-placeholder');
+		if(inputs[i].getAttribute('data-placeholder') != null){
+			inputs[i].value = inputs[i].getAttribute('data-placeholder');
+		}
 		inputs[i].addEventListener('focus', function() {
 			if (this.value == this.getAttribute('data-placeholder')) {
 			    this.value = '';
