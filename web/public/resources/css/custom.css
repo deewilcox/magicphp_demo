@@ -18,7 +18,7 @@
 	right: 0;
 	text-align: center;
 }
-#beerSignup-inner {
+#beerSignupInner {
 	padding: 20px;
 }
 #beerSignup input {
@@ -90,7 +90,7 @@
 	right: 0;
 	text-align: center;
 }
-#coffeeSignup-inner {
+#coffeeSignupInner {
 	padding: 20px;
 }
 #coffeeSignup input {
