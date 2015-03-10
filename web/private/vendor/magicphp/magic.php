@@ -27,14 +27,15 @@ namespace Magic;
 
 **/
 
-//include_once('config/magicSettings.json');
+include_once('magicSettings.php');
 include_once('magicResponse.php');
 include_once('magicFunctions.php');
 include_once('magicRequestManager.php');
 
 class Magic {
 
-    private $magicSettings;
+    
+private $magicSettings;
     private $magicUserSessionKey;
     private $magicErrorHandler;
     private $magicLogFile;
@@ -44,34 +45,40 @@ class Magic {
     public $magicResponseObject;
     public $magicFunctionsObject;
 
+
     public function __construct(){
-        /* Default values for settings */
-        $this->magicCanProcessRequest = false;
+        // Default values for settings 
+        /*
+$this->magicCanProcessRequest = false;
         $this->magicErrorHandler = false;
         $this->magicLogFile = false;
 
         $this->magicRequestObject = new MagicRequestManager();
         $this->magicResponseObject = new MagicResponse();
         $this->magicFunctionsObject = new MagicFunctions();
+        $this->magicSettings = new MagicSettings();
+*/
 
-        /* Get settings from json file */
-        $jsonSettings = file_get_contents('config/magicSettings.json');
-        $settingsArray = json_decode($jsonSettings);
-        $this->magicSettings = $settingsArray['settings'];
+        // Get settings from json file 
+        
 
-        /* If the request URL has not been set in the config file, get the server URI */
-        if($this->magicSettings->requestURI == '') {
+        // If the request URL has not been set in the config file, get the server URI 
+        /*
+if($this->magicSettings->requestURI == '') {
             $this->magicSettings->requestURI = $_SERVER['SERVER_NAME'];
         }
+*/
 
-        $this->magicErrorHandler = $this->magicSettings->errorHandler;
+       /*
+ $this->magicErrorHandler = $this->magicSettings->errorHandler;
         $this->magicCleanBuffer = $this->magicSettings->errorHandler;
         $this->magicLogFile = $this->magicSettings->errorHandler;
         $this->magicExitAllowed = $this->magicSettings->exitAllowed;
+*/
 
     }
-
-    /* Verify sessions are enabled and create a secure session */
+/*
+    // Verify sessions are enabled and create a secure session 
     public function verifySession() {
         $sessionId = session_id();
         if($sessionId === '') {
@@ -97,14 +104,6 @@ class Magic {
         return hash('md5', session_id());
     }
 
-    /*
-     * Function: processRequest
-     *
-     * Checks for and sets the unique magicPHP session key pair. This is to ensure we have a valid session.
-     * Creates a valid, open instance of magicPHP, in which various request types are received and processed.
-     * Checks for and instantiates the magicErrorHandler for handing back PHP errors.
-     *
-     */
     public function processRequest() {
         // Check to see if headers have already been set
         if (headers_sent($fileName, $lineNumber)) {
@@ -158,4 +157,5 @@ class Magic {
 
         return '<script>' . $javascript . '</script>';
     }
+    */
 }

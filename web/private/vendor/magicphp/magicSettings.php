@@ -1,6 +1,17 @@
-{
-  "settings": {
-    "debug": "false",
+<?php
+
+namespace Magic;
+
+class MagicSettings extends Magic {
+
+	private $settingsObject;
+	
+    public function __construct() {
+        parent::__construct();
+        
+        /*$settings = array(
+
+"debug": "false",
     "characterEncoding": "utf-8",
     "decodeUTF8Input": "false",
     "requestURI": "",
@@ -20,5 +31,12 @@
     "assets": {
       "magic.js": "/web/resources/magic.js"
     }
-  }
+
+
+);
+
+return $settings;
+*/
+    }
+
 }

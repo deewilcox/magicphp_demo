@@ -42,18 +42,27 @@
 
 	// Define callFunction function
 	$.fn.magicCallFunction = function ( functionName, formValues ){
+	console.log(functionName);
+	console.log(formValues);		
 		$.ajax({
+	      url: "/",
+	      data: {       		
+			requestFunction:'contact_save', 
+	      	requestParameters: 'none',
+      	  },
 	      type: "POST",
 	      dataType: "json",
-		  contentType: "application/json",
-		  url: "../../private/functions/" + functionName + ".php", 
-	      data: formValues,
-	      async: false,
 	      success: function(data) {
         	// do something
+      	  },
+      	  error: function (data) {
+      	  	console.log('fail');
+      	  	console.log(data);
+      	  },
+      	  complete: function(data){
+      	  	// do something
       	  }
    		});
-    	return false;
 	};
 	
     // Define getFormValues function
