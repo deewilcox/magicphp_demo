@@ -16,14 +16,14 @@ class MagicResponse extends Magic {
         return $obj;
     }
 
-    public function assign($elementId,$property,$data) {
+    public function assign($elementId,$data) {
         if($elementId !== '') {
             $formattedElementId = '"#' . $elementId . '"';
             $formattedProperty = '"' . $property . '"';
             $formattedData = '"' . $data . '"';
 
             $javascript = <<<JS
-            magic.assign($formattedElementId, $formattedProperty, $formattedData);
+            $.fn.magicAssign($formattedElementId, $formattedProperty, $formattedData);
 JS;
 
             return $javascript;
@@ -51,7 +51,7 @@ JS;
         if($string) {
             $formattedString = '"' . $string . '"';
             $javascript = <<<JS
-            magic.alert($formattedString);
+            $.fn.magicAlert($formattedString);
 JS;
 
             return $javascript;
@@ -66,7 +66,7 @@ JS;
         if($formId) {
             $formattedFormId = '"#' . $formId . '"';
             $javascript = <<<JS
-            magic.getFormValues($formattedFormId);
+            $.fn.magicGetFormValues($formattedFormId);
 JS;
             return $javascript;
         }

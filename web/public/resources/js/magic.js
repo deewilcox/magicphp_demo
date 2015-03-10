@@ -12,28 +12,23 @@
 
 (function ( $ ) {
 
-    $.fn.magic = function( options ) {
-        // Extend the default options
-        var opts = $.extend( {}, $.fn.magic.defaults, options );
-    };
-
-    // Defaults are a property of the magic plugin
-    $.fn.magic.defaults = {
-        // Define defaults
+    $.fn.magic = function() {
+        // Initialize the plugin
+        console.log('magic');
     };
 
     // Define alert function
-    $.fn.magic.alert = function( text ) {
+    $.fn.magicAlert = function( text ) {
         return alert(text);
     };
 
-    $.fn.magic.alertDialog = function ( title,text, button) {
+    $.fn.magicAlertDialog = function ( title,text, button) {
         // Update to use jQuery UI and tell this function to accept title, text, and button parameters.
     };
 
     // Define assign function
-    $.fn.magic.assign = function( elementId, htmlProperty, data ) {
-        var element = jQuery("#" + elementId + "");
+    $.fn.magicAssign = function( elementId, data ) {
+        var element = jQuery('#' + elementId);
         if( typeof elementId == undefined) {
             debug('assign','Element is undefined');
         }
@@ -41,15 +36,28 @@
             debug('assign','Element is null');
         }
         else {
-            //htmlProperty will most commonly be innerHTML or outerHTML
-            elementId.htmlProperty = data;
+            jQuery('#' + elementId).html(data);
         }
-
-        return this;
     };
 
+	// Define callFunction function
+	$.fn.magicCallFunction = function ( functionName, formValues ){
+		$.ajax({
+	      type: "POST",
+	      dataType: "json",
+		  contentType: "application/json",
+		  url: "../../private/functions/" + functionName + ".php", 
+	      data: formValues,
+	      async: false,
+	      success: function(data) {
+        	// do something
+      	  }
+   		});
+    	return false;
+	};
+	
     // Define getFormValues function
-    $.fn.magic.getFormValues = function( formId ) {
+    $.fn.magicGetFormValues = function( formId ) {
         return jQuery(formId).serializeArray();
     };
 

@@ -1,5 +1,8 @@
 <?php
 
+/* Function for populating the view */
+/* Currently using dialog instead */
+
 function contact_form(){
 	global $objResponse;
 	
