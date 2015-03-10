@@ -2,7 +2,7 @@
 
 namespace Magic;
 
-class MagicSettings extends Magic {
+class MagicSettings {
 
 	private $settingsObject;
 	

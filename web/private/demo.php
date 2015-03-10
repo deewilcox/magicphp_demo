@@ -16,13 +16,14 @@ include(PRIVATE_BASE . 'includes/modules/core.php');
 /* Manually load vendor/magicphp */
 include(PRIVATE_BASE . 'vendor/magicphp/magic.php');
 
-use Magic\Magic as M;
+use Magic\Magic;
 
-/* $objResponse = new MagicResponse(); */
+//$magicObject = new Magic();
+//$magicResponse = $magicObject->magicResponseObject;
 
 /* $objResponse->processRequest(); */
 
-/* $magicJS = $objResponse->getJavascript(); */
+/* $magicJS = $magicResponse->getJavascript(); */
 $magicJS = '';
 /* Begin logging */
 

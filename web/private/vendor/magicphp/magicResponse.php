@@ -2,18 +2,11 @@
 
 namespace Magic;
 
-class MagicResponse extends Magic {
-
+class MagicResponse {
+	private $responseObject;
+	
     public function __construct() {
-        parent::__construct();
-    }
-
-    public static function &getInstance() {
-        static $obj;
-        if (!$obj) {
-            $obj = new MagicResponse();
-        }
-        return $obj;
+        $this->responseObject = array();
     }
 
     public function assign($elementId,$data) {
@@ -26,7 +19,7 @@ class MagicResponse extends Magic {
             $.fn.magicAssign($formattedElementId, $formattedProperty, $formattedData);
 JS;
 
-            return $javascript;
+            $this->responseObject[] = $javascript;
         }
         else {
             return false;

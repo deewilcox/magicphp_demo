@@ -27,15 +27,20 @@ namespace Magic;
 
 **/
 
-include_once('magicSettings.php');
+
 include_once('magicResponse.php');
 include_once('magicFunctions.php');
 include_once('magicRequestManager.php');
+include_once('magicSettings.php');
 
+/*
+*******  MACKENZIE JOY WILCOX  ********
+    	************
+
+*/
 class Magic {
-
     
-private $magicSettings;
+	private $magicSettings;
     private $magicUserSessionKey;
     private $magicErrorHandler;
     private $magicLogFile;
@@ -47,8 +52,10 @@ private $magicSettings;
 
 
     public function __construct(){
+    	
+    	
         // Default values for settings 
-        /*
+        
 $this->magicCanProcessRequest = false;
         $this->magicErrorHandler = false;
         $this->magicLogFile = false;
@@ -57,27 +64,25 @@ $this->magicCanProcessRequest = false;
         $this->magicResponseObject = new MagicResponse();
         $this->magicFunctionsObject = new MagicFunctions();
         $this->magicSettings = new MagicSettings();
-*/
+
 
         // Get settings from json file 
         
 
         // If the request URL has not been set in the config file, get the server URI 
-        /*
-if($this->magicSettings->requestURI == '') {
-            $this->magicSettings->requestURI = $_SERVER['SERVER_NAME'];
-        }
-*/
-
-       /*
- $this->magicErrorHandler = $this->magicSettings->errorHandler;
+       
+		//if($this->magicSettings->requestURI == '') {
+  //          $this->magicSettings->requestURI = $_SERVER['SERVER_NAME'];
+  //    }
+       
+ 		$this->magicErrorHandler = $this->magicSettings->errorHandler;
         $this->magicCleanBuffer = $this->magicSettings->errorHandler;
         $this->magicLogFile = $this->magicSettings->errorHandler;
         $this->magicExitAllowed = $this->magicSettings->exitAllowed;
-*/
+
 
     }
-/*
+
     // Verify sessions are enabled and create a secure session 
     public function verifySession() {
         $sessionId = session_id();
@@ -157,5 +162,5 @@ if($this->magicSettings->requestURI == '') {
 
         return '<script>' . $javascript . '</script>';
     }
-    */
+    
 }

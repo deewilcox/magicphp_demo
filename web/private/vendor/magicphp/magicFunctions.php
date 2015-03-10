@@ -2,7 +2,7 @@
 
 namespace Magic;
 
-class MagicFunctions extends Magic {
+class MagicFunctions {
 
     public function __construct() {
         parent::__construct();
