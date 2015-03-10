@@ -1,7 +1,7 @@
 <?php 
 
 function contact_save($formValues) {
-	global $objResponse;
+	global $magicResponse;
 	
 	if(!empty($formValues)){		
 		$dialogHTML = <<<HTML
@@ -45,13 +45,13 @@ HTML;
 		$sent = mail($email, $subject, $message, $headers);  
 		
 		if($sent)  {
-			$objResponse->assign('coffeeSignup',$dialogHTML);
+			$magicResponse->assign('coffeeSignup',$dialogHTML);
 		} 
 		else  {
-			$objResponse->alert('There was a problem submitting your request. Please try again.');
+			$magicResponse->alert('There was a problem submitting your request. Please try again.');
 		}
 	}
 	else{
-		$objResponse->alert('There was a problem submitting your request. Please try again.');
+		$magicResponse->alert('There was a problem submitting your request. Please try again.');
 	}
 }
