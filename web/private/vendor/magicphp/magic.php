@@ -27,17 +27,11 @@ namespace Magic;
 
 **/
 
-
 include_once('magicResponse.php');
 include_once('magicFunctions.php');
 include_once('magicRequestManager.php');
 include_once('magicSettings.php');
 
-/*
-*******  MACKENZIE JOY WILCOX  ********
-    	************
-
-*/
 class Magic {
     
 	private $magicSettings;
@@ -53,10 +47,8 @@ class Magic {
 
     public function __construct(){
     	
-    	
-        // Default values for settings 
-        
-$this->magicCanProcessRequest = false;
+        // Default values for settings     
+		$this->magicCanProcessRequest = false;
         $this->magicErrorHandler = false;
         $this->magicLogFile = false;
 
@@ -65,15 +57,10 @@ $this->magicCanProcessRequest = false;
         $this->magicFunctionsObject = new MagicFunctions();
         $this->magicSettings = new MagicSettings();
 
-
-        // Get settings from json file 
-        
-
         // If the request URL has not been set in the config file, get the server URI 
-       
-		//if($this->magicSettings->requestURI == '') {
-  //          $this->magicSettings->requestURI = $_SERVER['SERVER_NAME'];
-  //    }
+		if($this->magicSettings->requestURI == '') {
+            $this->magicSettings->requestURI = $_SERVER['SERVER_NAME'];
+      	}
        
  		$this->magicErrorHandler = $this->magicSettings->errorHandler;
         $this->magicCleanBuffer = $this->magicSettings->errorHandler;
